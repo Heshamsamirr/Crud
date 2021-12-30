@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <!-- meta tags  -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <!-- title icon  -->
+    <link rel="icon" href="images/icon.png">
+
+    <title>Crud ( Products )</title>
+
+    <!-- css files  -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#273036" fill-opacity="1"
+            d="M0,192L26.7,197.3C53.3,203,107,213,160,186.7C213.3,160,267,96,320,80C373.3,64,427,96,480,122.7C533.3,149,587,171,640,160C693.3,149,747,107,800,117.3C853.3,128,907,192,960,213.3C1013.3,235,1067,213,1120,197.3C1173.3,181,1227,171,1280,165.3C1333.3,160,1387,160,1413,160L1440,160L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z">
+        </path>
+    </svg>
+    <h1 id="Crud" class="text-center mb-5">CRUD System</h1>
+
+    <!-- Start Crud inputs  -->
+    <div class="container">
+        <div class="curd-body w-50 m-auto  shadow p-5">
+            <div class=" my-3 ">
+                <label class="h5 " for="productName">Product Name <span class="text-danger">*</span></label>
+                <input type="text " class="form-control my-2 py-2  " id="productName"
+                    placeholder="Product Name is Required">
+                <div hidden id="alert-name" class="alert alert-danger">Product Name Must be Min 4 Chars</div>
+
+            </div>
+            <div class=" my-3 ">
+
+                <label class="h5" for="productPrice">Product Price <span class="text-danger">*</span></label>
+                <input type="number" class="form-control my-2 py-2" id="productPrice"
+                    placeholder="Product Price is Required">
+                <div hidden id="alert-price" class="alert alert-danger">Product Price Must Be [100-10000] (Numbers Only)
+                </div>
+
+            </div>
+            <div class=" my-3  ">
+
+                <label class="h5" for="productCategory">Product Category <span class="text-danger">*</span></label>
+                <input type="text" class="form-control my-2 py-2" id="productCategory"
+                    placeholder="Product Category is Required">
+                <div hidden id="alert-category" class="alert alert-danger">Product Name Must be (tv or mobile or lap)
+                </div>
+
+            </div>
+            <div class="my-3 ">
+
+                <label class="h5" for="productDesc">Product Desc <span class="text-danger">*</span></label>
+                <textarea type="text" class="form-control my-2 py-2 " id="productDesc"
+                    placeholder="Product Desc is Required"></textarea>
+                <div hidden id="alert-desc" class="alert alert-danger">Product Name Must be Min 4 Chars</div>
+
+            </div>
+
+            <button disabled id="add" onclick="addProduct()"
+                class="btn butn d-flex justify-content-center   my-3 m-auto">Add
+                Product</button>
+
+            <div hidden id="alert-all" class="alert alert-danger text-center">Please Fill In Required Info and Try
+                Again!
+            </div>
+        </div>
+    </div>
+    <!-- end Crud inputs  -->
+
+    <!-- Search -->
+    <div class="container">
+        <div class=" crud-table shadow w-75 m-auto pb-5 ">
+            <div class="w-75 m-auto my-5">
+                <label class="my-3" for="">Search</label>
+                <input onkeyup="searchProduct(this.value)" placeholder="Search By Product Name..." type="text"
+                    class="form-control ">
+            </div>
+            <!-- Start table -->
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="m-auto crud-table table  w-75 ">
+                        <thead>
+                            <th>Num</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Product Category</th>
+                            <th>Product Desc</th>
+                            <th></th>
+                            <th></th>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End table -->
+
+    <p class=" text-center text-muted mt-5 pt-5"> CRUD System 2021 &copy; By Hesham Samir</p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#273036" fill-opacity="1"
+            d="M0,224L48,234.7C96,245,192,267,288,250.7C384,235,480,181,576,170.7C672,160,768,192,864,208C960,224,1056,224,1152,229.3C1248,235,1344,245,1392,250.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

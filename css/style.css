@@ -1,0 +1,43 @@
+body {
+    background-color: #FCFCFC;
+    color: black;
+}
+
+.fas {
+    cursor: pointer;
+}
+
+.butn {
+    border-color: #273036 !important;
+    color: black;
+    background-color: transparent !important;
+}
+
+.butn:hover {
+    background-color: #273036 !important;
+    color: white;
+}
+
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+@media screen and (max-width: 780px) {
+    .curd-body {
+        width: 95% !important;
+    }
+
+    .crud-table {
+        width: 95% !important;
+    }
+}
+
+.ttr:hover {
+    background-color: #F2F2F2;
+    transition: all .2s;
+}
+
+thead {
+    color: white;
+    background-color: #273036;
+}
